@@ -4,7 +4,7 @@ function getQuote() {
 	$.getJSON(quoteUrl, createTweet);
 };
 function createTweet(input) {
-	if (!input.quoteAuthor.length) {
+	if (!input.quoteAuthor) {
 		input.quoteAuthor = "Unknown author";
 	};
     var tweetText = "Quote of the day - " + input.quoteText + " Author: " + input.quoteAuthor;
